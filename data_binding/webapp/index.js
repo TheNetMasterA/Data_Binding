@@ -26,7 +26,7 @@ sap.ui.require([
 		// @see https://sapui5.hana.ondemand.com/#/topic/ec753bc539d748f689e3ac814e129563
 		var oResourceModel = new ResourceModel({
 			bundleName: "sap.ui.demo.db.i18n.i18n",
-			supportedLocales: ["", "de"],
+			supportedLocales: ["", "de", "es"],
 			fallbackLocale: ""
 		});
 

@@ -9,19 +9,21 @@ sap.ui.require([
 	sap.ui.getCore().attachInit(function () {
 		// Create a JSON model from an object literal
 		var oModel = new JSONModel({
-			firstName: "Victor",
-			lastName: "Hernández",
+			firstName: "Harry",
+			lastName: "Hawk",
 			enabled: true
 		});
 
 		// Assign the model object to the SAPUI5 core
 		sap.ui.getCore().setModel(oModel);
 
-		// Create a resource bundle for language specific texts
+		// Create a resource bundle for language-specific texts
 		// the configured supportedLocales represent the i18n files present:
 		// * "" - i18n/i18n.properties
-		// the configured fallbackLocale should represent one of these files
-		// * "" - according to the fallback chain the root bundle is the last fallback.
+		// * "de" - i18n/i18n_de.properties
+		// a configured fallbackLocale should represent one of these files
+		// * "" - according to the fallback chain, the root bundle is the last fallback
+		//   which means that if "de" was requested here, the root bundle would never be loaded.
 		//   Configuring it explicitly avoids side effects when additional resource files are added.
 		// @see https://sapui5.hana.ondemand.com/#/topic/ec753bc539d748f689e3ac814e129563
 		var oResourceModel = new ResourceModel({
